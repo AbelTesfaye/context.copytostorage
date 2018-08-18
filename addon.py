@@ -10,6 +10,7 @@ __addon__ = xbmcaddon.Addon()
 __addonname__ = __addon__.getAddonInfo('name')
 
 def copyFileOrFolder(src, dest):
+    print("(src, dest)",src, dest)
     xbmc.executebuiltin("Notification(\"Started Copying ...\", \"%s\")" % sys.listitem.getLabel())
 
     try:
@@ -23,19 +24,20 @@ def copyFileOrFolder(src, dest):
 
 def main():
     srcFilePath = sys.listitem.getPath()
-    fileName = os.path.basename(srcFilePath)
 
     if srcFilePath[len(srcFilePath)-1] == "/":
         srcFilePath = srcFilePath[:len(srcFilePath)-1]
         print("new srcFilePath",srcFilePath)
 
+
+    fileName = os.path.basename(srcFilePath)
+
     try:
 
-        destPathOnly = None
         dialog = xbmcgui.Dialog()
         destPathOnly = dialog.browseSingle(3, 'Copy file', 'files', '', True, False, '')
 
-        if(srcFilePath != "" and destPathOnly != None):
+        if(srcFilePath != "" and destPathOnly != ""):
             destFilePath = destPathOnly + fileName
 
             copyFileOrFolder(srcFilePath, destFilePath)
