@@ -1,0 +1,10 @@
+# Kodi Media Center language file
+# Addon Name: Copy to Storage
+# Addon id: context.copytostorage
+msgid ""
+msgstr ""
+
+msgctxt "#32000"
+msgid "Copy To storage"
+msgstr ""
+
