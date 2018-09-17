@@ -7,14 +7,14 @@
     <menu id="kodi.core.main">
       <item library="addon.py">
         <label>32000</label>
-        <visible>yes</visible>
+        <visible>String.IsEqual(ListItem.dbtype,movie) |String.IsEqual(ListItem.dbtype,video) |  String.IsEqual(ListItem.dbtype,tvshow) | String.IsEqual(ListItem.dbtype,episode) | String.IsEqual(ListItem.dbtype,musicvideo) | String.IsEqual(ListItem.dbtype,music) | String.IsEqual(ListItem.dbtype,song) | String.IsEqual(ListItem.dbtype,album)| String.IsEqual(ListItem.dbtype,artist) </visible>
       </item>
     </menu>
   </extension>
   <extension point="kodi.addon.metadata">
     <platform>all</platform>
-    <summary lang="en">Copy any file using the context menu.</summary>
-    <description lang="en">Adds a context menu entry for to enable you to copy movies, songs, etc.. into your devices</description>
+    <summary lang="en_GB">Copy any file using the context menu.</summary>
+    <description lang="en_GB">Adds a context menu entry for to enable you to copy movies, songs, etc.. into your devices</description>
     <license>GNU GENERAL PUBLIC LICENSE. Version 3,  29 June 2007</license>
     <forum></forum>
     <source>https://github.com/abeltesfaye/context.copytostorage</source>
